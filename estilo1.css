@@ -1,0 +1,154 @@
+body {
+    margin: 0;    /* Remover a margem padrão do body */
+    padding: 0;   /* Remover o padding padrão do body */
+}
+
+/* Ajustes para o menu */
+#menu {
+    background-color: rgb(124, 11, 11);
+    width: 100%;
+    height: 70px;
+    position: fixed; /* Tornar o menu fixo no topo */
+    top: 0;          /* Fixa o menu no topo da página */
+    left: 0;         /* Garante que o menu ocupe toda a largura da tela */
+    z-index: 1000;   /* Garante que o menu fique acima de outros elementos */
+    padding: 10px 0; /* Padding no topo e embaixo do menu */
+}
+
+#menu .logo h1 {
+    float: left;
+    margin-left: 50px;
+    font-family: 'Rock Salt', cursive;
+    color: white;
+    margin-top: -5px;
+    font-size: 30px;
+}
+
+#menu .links {
+    float: right;
+    margin-right: 50px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 70px;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste do banner */
+#banner {
+    margin-top: 80px; /* Ajusta o espaço para o banner, já que o menu agora é fixo */
+    text-align: center;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos do conteúdo */
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-top: 20px;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+.content ul li {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Estilos decorativos (formas e detalhes vermelhos) */
+.container:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Red_Hand.svg/1024px-Red_Hand.svg.png') no-repeat center center;
+    background-size: cover;
+    top: 20px;
+    left: 20px;
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background: red;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Novos detalhes criminais */
+.content:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Fingerprint_5.svg/1024px-Fingerprint_5.svg.png') no-repeat center center;
+    background-size: 100px;
+    opacity: 0.1;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    margin-right: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+h2:after {
+    content: "⚖️";
+    margin-left: 10px;
+    color: red;
+    font-size: 18px;
+}
+
+/* Ajuste para a rolagem suave */
+html {
+    scroll-padding-top: 80px;  /* Ajusta a rolagem para que o conteúdo não fique atrás do menu fixo */
+}
+
+ul li:before {
+    content: "🔍";
+    margin-right: 8px;
+    color: red;
+}
